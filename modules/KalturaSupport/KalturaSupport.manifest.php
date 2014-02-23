@@ -1,17 +1,17 @@
 <?php
 /**
- * The kaltura plugin manifest
+ * The Kaltura plugin manifest
  */
 
 $kgDefaultComponentAttr = array(
 	'parent' => array(
-		'doc' => 'Parent container for component, components include default placement, so leave as null if unsure',
+		'doc' => 'Parent container for component. Components include default placement. Leave as null if unsure.',
 		'type' => 'enum',
 		'enum' => array("topBarContainer", "videoHolder", "controlsContainer")
 	),
 	'order' => array(
 		'doc' => 'Draw order of the component within the container.
-			Together with alignment determines component placement of the component. Inspect elements see sibling order.',
+			Together with alignment, determines component placement of the component. Inspect elements see sibling order.',
 		'type' => 'number',
 	),
 	'align' => array(
@@ -24,69 +24,69 @@ $kgDefaultComponentAttr = array(
 // list any duplicate attribute sets here:
 $kgDefaultCaptionAttr = array(
 	'layout' => array(
-		'doc' => 'Layout mode for caption, overlaid or under player',
+		'doc' => 'Layout mode for caption, overlaid or under player.',
 		'type' => 'enum',
 		'initvalue' => 'ontop',
 		'enum' => array("ontop", "below"),
 		'options' => array(
 			array(
-				'label' => "On top of the video",
+				'label' => "On top of the video.",
 				'value' => "ontop"
 			),
 			array(
-				'label' => "Below the video",
+				'label' => "Below the video.",
 				'value' => "below"
 			)
 		)
 	),
 	'displayCaptions' => array(
-		'doc' => 'Should caption be displayed by default',
+		'doc' => 'Should caption be displayed by default.',
 		'initvalue' => true,
 		'type' => 'boolean'
 	),
 	'useCookie' => array(
-		'doc' => 'Should use cookies to store user language',
+		'doc' => 'Should use cookies to store user language.',
 		'type' => 'boolean'
 	),
 	'fontFamily' => array(
-		'doc' => "Top level font family for Captions text",
+		'doc' => "Top level font family for caption text.",
 		'type' => 'enum',
 		'initvalue' => 'Arial',
 		'enum' => array("Arial", "Arial Narrow", "Arial Black", "Bookman Old Style", "Century Gothic", "Comic Sans MS", "Consolas", "Courier New", "Constantia,Georgia", "Helvetica,Arial", "Impact", "Lucida Sans Unicode", "Cambria", "symbol", "Tahoma", "Cambria", "Times New Roman", "Trebuchet MS", "Verdana,Geneva", "DejaVu Sans", "Webdings,fantasy", "Wingdings,fantasy", "Monotype Corsiva", "Monotype Sorts")
 	),
 	'fontsize' => array(
-		'doc' => "Captions font size",
+		'doc' => "Captions' font size.",
 		'label' => 'Font size',
 		'initvalue' => 12,
 		'type' => 'number'
 	),
 	'defaultLanguageKey' => array(
-		'doc' => "The default language key for the player",
+		'doc' => "The default language key for the player.",
 		'type' => 'language'
 	),
 	'bg' => array(
-		'doc' => "Background color for timed text",
+		'doc' => "Background color for timed text.",
 		'label' => 'Background color',
 		'initvalue' => 'ontop',
 		'type' => 'color'
 	),
 	'fontColor' => array(
-		'doc' => "Color of the caption text",
+		'doc' => "Color of the caption text.",
 		'initvalue' => '#000000',
 		'type' => 'color'
 	),
 	'useGlow' => array(
-		'doc' => "If the timed text should have a glow / shadow",
+		'doc' => "If the timed text should have a glow / shadow.",
 		'initvalue' => false,
 		'type' => 'boolean'
 	),
 	'glowBlur' => array(
-		'doc' => "The glow amount in pixels",
+		'doc' => "The glow amount in pixels.",
 		'initvalue' => 0,
 		'type' => 'number'
 	),
 	'glowColor' => array(
-		'doc' => 'The color of the glow',
+		'doc' => 'The color of the glow.',
 		'initvalue' => '#ffffff',
 		'type' => 'color'
 	)
@@ -94,17 +94,17 @@ $kgDefaultCaptionAttr = array(
 return array(
 	/*Captions */
 	'closedCaptions' => array(
-		'description' => 'Reach multi-lingual audience and comply with FCC regulations with Kaltura multi-lingual closed captions support.',
+		'description' => 'Reach multi-lingual audiences and comply with FCC regulations with Kaltura multi-lingual closed captions support.',
 		'attributes' => $kgDefaultCaptionAttr
 	),
 	'custom1BtnControllerScreen' => array(
 		'description' => 'Custom on screen button',
 	),
 	'controlBarContainer' => array(
-		'description' => 'Control bar container, holds all the player controls',
+		'description' => 'Control bar container, holds all the player controls.',
 		'attributes' => array(
 			'hover' => array(
-				'doc' => "If the controls should hover on the player, or not",
+				'doc' => "If the controls should hover on the player, or not.",
 				'type' => 'boolean'
 			)
 		)
@@ -122,71 +122,71 @@ return array(
 	/** Playlists */
 
 	'carousel' => array(
-		'description' => 'Displays an on-screen list of clips in carousel, when playing its hidden, when paused its displayed',
+		'description' => 'Displays an on-screen list of clips in the carousel, When playing it's hidden, when paused its displayed.',
 		'attributes' => array(
 			'playlist_id' => array(
-				'doc' => "The id of the playlist to be displayed",
+				'doc' => "The ID of the playlist to be displayed.",
 				'type' => 'string'
 			)
 		)
 	),
 	'loadingSpinner' => array(
-		'description' => 'Loading spinner options let you customize the look of loading spinner.',
+		'description' => 'Use to customize the look of the loading spinner.',
 		'attributes' => array(
 			'imageUrl' => array(
-				'doc' => "A image URL, to use as the loading spinner, by default its null. If given a URL it will replace the dynamic loading spinner.",
+				'doc' => "An image URL to use as the loading spinner. The default its null. If given a URL, it will replace the dynamic loading spinner.",
 				'type' => 'url'
 			),
 			'lines' => array(
-				'doc' => 'The number of lines to draw, 11 by default',
+				'doc' => 'The number of lines to draw, Default is 11.',
 				'type' => 'number'
 			),
 			'lineLength' => array(
-				'doc' => 'The length of each line, 10 pixels by default',
+				'doc' => 'The length of each line. Default is 10 pixels.',
 				'type' => 'number'
 			),
 			'width' => array(
-				'doc' => 'The line thickness, 6 pixels thick by default',
+				'doc' => 'The line thickness. Default is 6 pixels thick.',
 				'type' => 'number'
 			),
 			'radius' => array(
-				'doc' => 'The radius of the inner circle, 12 pixels thick by default',
+				'doc' => 'The radius of the inner circle. Default is12 pixels thick.',
 				'type' => 'number'
 			),
 			'corners' => array(
-				'doc' => 'Corner roundness (0..1), default 1 for fully rounded corners',
+				'doc' => 'Corner roundness (0..1). Default is 1 for fully rounded corners.',
 				'type' => 'number'
 			),
 			'rotate' => array(
-				'doc' => 'The rotation offset, 0 by default',
+				'doc' => 'The rotation offset. Default is 0.',
 				'type' => 'number'
 			),
 			'direction' => array(
-				'doc' => '1: clockwise, -1: counterclockwise, clockwise by default',
+				'doc' => '1: clockwise, -1: counterclockwise. Default is clockwise.',
 				'type' => 'number'
 			),
 			'color' => array(
-				'doc' => 'An array of RGB colors delimited by |, or a single RGB style color string. By default uses color wheel.',
+				'doc' => 'An array of RGB colors delimited by |, or a single RGB style color string. The default uses the color wheel.',
 				'type' => 'string'
 			),
 			'speed' => array(
-				'doc' => 'Rounds per second, default 1.6',
+				'doc' => 'Rounds per second. Default is1.6.',
 				'type' => 'float'
 			),
 			'trail' => array(
-				'doc' => 'Afterglow percentage. 100 by default',
+				'doc' => 'Afterglow percentage. Default is100.',
 				'type' => 'number'
 			),
 			'shadow' => array(
-				'doc' => 'Whether to render a shadow, false by default',
+				'doc' => 'Whether to render a shadow. Default is False.',
 				'type' => 'boolean'
 			),
 			'hwaccel' => array(
-				'doc' => 'Whether to use hardware acceleration on loading spinner',
+				'doc' => 'Whether to use hardware acceleration on loading spinner.',
 				'type' => 'boolean'
 			),
 			'className' => array(
-				'doc' => 'The CSS class to assign to the spinner, default \'spinner\'',
+				'doc' => 'The CSS class to assign to the spinner. Default is \'spinner\.'',
 				'type' => 'string'
 			),
 			'zIndex' => array(
@@ -194,31 +194,31 @@ return array(
 				'type' => 'string'
 			),
 			'top' => array(
-				'doc' => 'Top position relative to parent in px, default auto',
+				'doc' => 'Top position relative to the parent in px. Default is auto.',
 				'type' => 'string'
 			),
 			'left' => array(
-				'doc' => 'Left position relative to parent in px',
+				'doc' => 'Left position relative to parent in px.',
 				'type' => 'string'
 			)
 		)
 	),
 	'playlistAPI' => array(
-		'description' => 'The kaltura playlist plugin, supports associating multiple clips in sequence.',
+		'description' => 'The Kaltura playlist plugin, supports associating multiple clips in sequence.',
 		'attributes' => array(
 			'autoContinue' => array(
-				'doc' => "If the playlist should autocontinue",
+				'doc' => "If the playlist should autocontinue.",
 				'type' => 'boolean'
 			),
 			'autoPlay' => array(
-				'doc' => "If the playlist should autoplay on load",
+				'doc' => "If the playlist should autoplay on load.",
 				'type' => 'boolean'
 			),
 			'initItemEntryId' => array(
-				'doc' => "The entryId that should be played first"
+				'doc' => "The entryId that should be played first."
 			),
 			'kpl0Url' => array(
-				'doc' => 'The playlist url. ( can be a kaltura playlist service or mrss)',
+				'doc' => 'The playlist URL. (This may be a Kaltura playlist service or MRSS)',
 				'type' => 'url'
 			),
 			'kpl0Name' => array(
