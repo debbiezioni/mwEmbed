@@ -1,6 +1,6 @@
 <?php
 /**
- * The kaltura plugin manifest
+ * The Kaltura plugin manifest
  */
 
 $kgDefaultComponentAttr = array(
@@ -11,7 +11,7 @@ $kgDefaultComponentAttr = array(
     ),
     'order' => array(
         'doc' => 'Draw order of the component within the container.
-			Together with alignment, determines component placement of the component. The order is set with respect to siblings on the parent container.',
+			Use to control the placement of the component relevant to the other components.',
         'type' => 'number.',
     ),
     'align' => array(
@@ -49,7 +49,7 @@ $kgDefaultCaptionAttr = array(
 		'type' => 'boolean'
 	),
 	'fontFamily' => array(
-		'doc' => "Top level font familiy for Captions text.",
+		'doc' => "Top level font family for captions text.",
 		'type' => 'enum',
 		'initvalue' => 'Arial',
 		'enum' => array("Arial", "Arial Narrow", "Arial Black", "Bookman Old Style", "Century Gothic", "Comic Sans MS", "Consolas", "Courier New", "Constantia,Georgia", "Helvetica,Arial", "Impact", "Lucida Sans Unicode", "Cambria", "symbol", "Tahoma", "Cambria", "Times New Roman", "Trebuchet MS", "Verdana,Geneva", "DejaVu Sans", "Webdings,fantasy", "Wingdings,fantasy", "Monotype Corsiva", "Monotype Sorts")
@@ -94,7 +94,7 @@ $kgDefaultCaptionAttr = array(
 return array(
     /*Captions */
     'closedCaptions' => array(
-        'description' => 'Reach multi-lingual audience and comply with FCC regulations with Kaltura multi-lingual closed captions support.',
+        'description' => 'Use to set up closed captions and the caption display. Kaltura inlcudes multi-lingual closed captions support that comply with FCC regulations.',
         'attributes' => $kgDefaultCaptionAttr
     ),
     'custom1BtnControllerScreen' => array(
@@ -134,7 +134,7 @@ return array(
         'description' => 'Loading spinner options allows you to customize the look of the loading spinner.',
         'attributes' => array(
             'imageUrl' => array(
-                'doc' => "An image URL, to use as the loading spinner. By default it is null. If a URL is provided, it will replace the dynamic loading spinner.",
+                'doc' => "An image URL to use as the loading spinner. By default it is null. If a URL is provided, it will replace the dynamic loading spinner.",
                 'type' => 'url'
             ),
             'lines' => array(
@@ -170,7 +170,7 @@ return array(
                 'type' => 'string'
             ),
             'speed' => array(
-                'doc' => 'Rounds per second, default 1.6'.,
+                'doc' => 'Rounds per second. Default is 1.6'.,
                 'type' => 'float'
             ),
             'trail' => array(
@@ -194,7 +194,7 @@ return array(
                 'type' => 'string'
             ),
             'top' => array(
-                'doc' => 'Top position relative to parent in px, default auto.',
+                'doc' => 'Top position relative to parent in px. Default is auto.',
                 'type' => 'string'
             ),
             'left' => array(
@@ -207,7 +207,7 @@ return array(
         'description' => 'The Kaltura playlist plugin, supports associating multiple clips in sequence.',
         'attributes' => array(
             'autoContinue' => array(
-                'doc' => "If the playlist should autocontinue.",
+                'doc' => "If the playlist should auto-continue.",
                 'type' => 'boolean'
             ),
             'autoPlay' => array(
@@ -218,7 +218,7 @@ return array(
                 'doc' => "The entryId that should be played first."
             ),
             'kpl0Url' => array(
-                'doc' => 'The playlist URL. (can be a Kaltura playlist service or MRSS)',
+                'doc' => 'The playlist URL. (Can be a Kaltura playlist service or MRSS)',
                 'type' => 'url'
             ),
             'kpl0Name' => array(
@@ -251,8 +251,8 @@ return array(
     ),
     'metadataProfileId' => array(
         'doc' => "The metadata profile ID to be used for custom player metadata. <br> " .
-            " If unset, will use the latest metadata ID added to that player. It is best to point it at a particular metadata profile ID.<br>" .
-            "It Will pouplate {mediaProxy.entryMetadata} with the associated custom data.",
+            " If unset, uses the latest metadata ID added to that player. It is best to point it at a particular metadata profile ID.<br>" .
+            "It Will pouplate {mediaProxy.entryMetadata} with the associated custom metadata.",
         'type' => 'number'
     ),
     'externalInterfaceDisabled' => array(
@@ -410,17 +410,17 @@ The playhead reflects segment time as if it was the natural stream length.",
                 "numberOfDecimals" => 0
             ),
             'buttonsColor' => array(
-                'label' => 'Button\'s color',
+                'label' => 'Buttons color',
                 "initvalue" => "#000000",
                 'player-refresh' => 'theme.buttonsColor',
-                'doc' => 'Button\'s color',
+                'doc' => 'Buttons color',
                 'type' => 'color'
             ),
             'buttonsIconColor' => array(
-                'label' => 'Button\'s icon color',
+                'label' => 'Buttons icon color',
                 "initvalue" => "#ffffff",
                 'player-refresh' => 'theme.buttonsIconColor',
-                'doc' => 'Button\'s icon color',
+                'doc' => 'Buttons icon color',
                 'type' => 'color'
             ),
             'sliderColor' => array(
@@ -454,7 +454,7 @@ The playhead reflects segment time as if it was the natural stream length.",
         'model' =>'config.plugins.share',
         'attributes' => array(
             'parent' => array(
-                'doc' => 'Parent container for component. Components include default placement, leave as null if unsure.',
+                'doc' => 'Parent container for component. Components include default placement. Leave as null if unsure.',
                 'model' => "config.plugins.share.parent",
                 'type' => 'enum',
                 'enum' => array("topBarContainer", "videoHolder", "controlsContainer"),
@@ -493,7 +493,7 @@ The playhead reflects segment time as if it was the natural stream length.",
                 'doc' => "Allows you to define the URL shared for this player.
 					<ul>
 						<li><b>Smart</b> will maximize inline social sharing playback, by using the
-							page URL or Kaltura URL, and depend on whether opengraph tags are present</li>
+							page URL or Kaltura URL, and depend on whether opengraph tags are present.</li>
 						<li><b>Parent</b> will share the parent page URL.</li>
 						<li><b>http://my-custom-domain.com/?v={mediaProxy.entry.id}</b> a custom URL with magic substitution can also be used.</li>
 					</ul>",
