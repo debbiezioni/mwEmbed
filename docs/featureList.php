@@ -1,12 +1,12 @@
 <?php 
 	return array(
 		'KeyFeatures'=> array(
-			'title' => "Key features",
-			'desc' => "Key features of the kaltura front end platform.",
+			'title' => "Key Features",
+			'desc' => "Key features of the Kaltura front end platform.",
 			'featureSets' => array(
 				'Captions' => array(
-					'title' => 'Accessibility and Close Captions',
-					'desc' => 'The kaltura captions player api, supports srt and ttml formats.',
+					'title' => 'Accessibility and Closed Captions.',
+					'desc' => 'The Kaltura captions player API, supports SRT and TTML formats.',
 					'testfiles' => array(
 						'CaptionsKalturaApi' => array(
 							'title' => 'Captions API',
@@ -18,10 +18,9 @@
 							'path' => '',
 						),*/
 						'CaptionsCustomVarsTTML' => array(
-							'title' => 'Captions, TTML format',
+							'title' => 'Captions, TTML Format',
 							'path' => 'KalturaSupport/tests/CaptionsCustomVarsTTML.qunit.html',
-						),
-						// not working with player v2:
+						),.
 						/*'CaptionsPlyMedia' => array(
 							'title' => 'PlyMedia Captions',
 							'path' => 'Plymedia/tests/Plymedia_Kaltura.html',
@@ -30,7 +29,7 @@
 				),
 				'Live' => array(
 					'title' => 'Live',
-					'desc' => 'The kaltura LIVE supports sending streams to both HLS (iOS / mobile) and HDS ( flahs ).',
+					'desc' => 'The Kaltura LIVE supports sending streams to both HLS (iOS/mobile) and HDS (Flash).',
 					'testfiles' => array(
 						'LiveStream' => array(
 							'title' => 'Live Stream',
@@ -40,7 +39,7 @@
 				),
 				'Access_Control'=> array(
 					'title' => "Access Controls",
-					'desc' => 'Provides mechanism to control access to player content',
+					'desc' => 'Provides mechanism to control access to player content.',
 					'testfiles' => array(
 						'CustomMessageAccessControlKS' => array(
 							'title' => 'Custom Control Message',
@@ -58,7 +57,7 @@
 				),
 				'Playlists'=> array(
 					'title' => "Playlists",
-					'desc' => 'Playlists support is built into the kaltura player',
+					'desc' => 'Playlists support is built into the Kaltura player.',
 					'testfiles' => array(
 						'playlistApi' => array(
 							'title' => 'Playlist API',
@@ -98,7 +97,7 @@
 		),
 		'Plugins'=> array(
 			'title' => "Plugins",
-			'desc' => "Leverage 3rd party services to enhance player capabilities",
+			'desc' => "Configure to leverage 3rd party services to enhance player capabilities.",
 			'featureSets' => array(
 				'Ads' => array(
 					'title' => "Monetization",
@@ -145,7 +144,7 @@
 				
 				'Analytics' => array(
 					'title' => 'Analytics',
-					'desc' => 'The Kaltura player supports several systems for tracking video playback',
+					'desc' => 'The Kaltura player supports several systems for tracking video playback.',
 					'testfiles' => array(
 						'KalturaAnalytics' => array( 
 							'title' => 'Kaltura Analytics',
@@ -187,7 +186,7 @@
 				),
 				'On_Page_Plugins' => array(
 					'title' => 'Engagement',
-					'desc' => 'On page widgets load the same plugin for both flash and HTML5',
+					'desc' => 'On page widgets load the same plugin for both Flash and HTML5.',
 					'testfiles' => array(
 						'chaptersView' => array(
 							'title' => 'Chapters',
@@ -213,7 +212,7 @@
 				),
 				'Transport' => array(
 					'title' => 'Transport',
-					'desc' => 'These plugins help optimize video delivery',
+					'desc' => 'These plugins help optimize video delivery.',
 					'testfiles' => array(
 						'Peer5' => array( 
 							'title' => 'Peer5 HTML5 P2P',
@@ -229,7 +228,7 @@
 			'featureSets' => array(
 				'Custom_Players' => array(
 					'title' => "Player Appearance",
-					'desc' => 'The Kaltura supports loading external CSS and JS to customize players look and feel',
+					'desc' => 'Kaltura supports loading external CSS and JS to customize the players look and feel.',
 					'testfiles' => array(
 						'ExternalResources' => array(
 							'title' => 'External Resources',
@@ -292,11 +291,11 @@
 		),
 		'Tools' => array(
 			'title' => "Integration tools",
-			'desc' => "Front end tools from embedding content, api helpers and sample integration code",
+			'desc' => "Front end tools from embedding content, API helpers and sample integration code.",
 			'featureSets' => array(
 		
 				'Embedding'  => array(
-					'title' => 'Embedding the kaltura player',
+					'title' => 'Embedding the Kaltura player',
 					'desc' => 'These files cover basic embedding from <a href="#rewrite">legacy</a> object embed, to the dynamic <a href="#kwidget">kWidget</a> embed method', 
 					'testfiles' =>array(
 						'kwidget' => array(
@@ -356,7 +355,7 @@
 							'path' => 'KalturaSupport/tests/BufferEvents.qunit.html'
 						),
 						'SeekApi' => array(
-							'title' => 'Seek Api', 
+							'title' => 'Seek API', 
 							'path' => 'KalturaSupport/tests/SeekApi.qunit.html'
 						),
 						'StartEndPreview' => array(
@@ -364,7 +363,7 @@
 							'path' => 'KalturaSupport/tests/PlayFromOffsetStartTimeToEndTime.html'
 						),
 						'CustomMetaData' => array( 
-							'title' => 'Access Custom Meta Data',
+							'title' => 'Access Custom Metadata',
 							'path' => 'KalturaSupport/tests/CustomMetaData.html'
 						),
 						'showAlert' =>  array(
@@ -383,7 +382,7 @@
 					'desc' => 'Stand alone tools',
 					'testfiles' => array(
 						'getSources' => array(
-							'title' => 'Get Flavor Urls',
+							'title' => 'Get Flavor URLs',
 							'path' => '../kWidget/tests/kWidget.getSources.html',
 						),
 						'selfHostedSources' => array(
