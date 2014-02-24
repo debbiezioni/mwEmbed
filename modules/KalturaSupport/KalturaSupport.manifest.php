@@ -5,13 +5,13 @@
 
 $kgDefaultComponentAttr = array(
     'parent' => array(
-        'doc' => 'Parent container for component. Components include default placement, leave as null if unsure.',
+        'doc' => 'Parent container for component. Components include the default placement. Leave as null if unsure.',
         'type' => 'enum',
         'enum' => array("topBarContainer", "videoHolder", "controlsContainer")
     ),
     'order' => array(
         'doc' => 'Draw order of the component within the container.
-			Together with alignment, determines component placement of the component. Order is set with respect to siblings on the parent container.',
+			Together with alignment, determines component placement of the component. The order is set with respect to siblings on the parent container.',
         'type' => 'number.',
     ),
     'align' => array(
@@ -994,7 +994,7 @@ The playhead reflects segment time as if it was the natural stream length.",
 		)
 	),
 	'infoScreen' => array(
-		'description' => 'Add Information screen about the video.',
+		'description' => 'Add information screen about the video.',
 		'attributes' => array_merge($kgDefaultComponentAttr,
 			array(
 				'minWidth' => array(
@@ -1006,14 +1006,14 @@ The playhead reflects segment time as if it was the natural stream length.",
 					'type' => 'string',
 				),
 				'template' => array(
-					'doc' => 'HTML Template for the info screen.',
+					'doc' => 'HTML template for the info screen.',
 					'type' => 'string',
 				),
 			)
 		)
 	),
 	'titleLabel' => array(
-		'description' => 'Enables a title hover overlay over the video content.',
+		'description' => 'Use to set the title text within the hover.',
 		'attributes' => array(
 			'align' => array(
 				'doc' => 'Alignment for title text.',
@@ -1027,11 +1027,11 @@ The playhead reflects segment time as if it was the natural stream length.",
 		)
 	),
 	'related' => array(
-		'description' => 'Add the Related Videos screen at the end of the video to attract users to watch additional videos.',
+		'description' => 'Use to add the Related Videos screen at the end of the video to attract users to watch additional videos.',
 		'attributes' => array_merge($kgDefaultComponentAttr,
 			array(
 				'playlistId' => array(
-					'doc' => 'Playlist Id that will be used as the data source for related items.',
+					'doc' => 'Playlist ID that will be used as the data source for related items.',
 					'type' => 'string'
 				),
 				'entryList' => array(
@@ -1044,7 +1044,7 @@ The playhead reflects segment time as if it was the natural stream length.",
                     'type' => 'boolean'
                 ),
                 'autoContinueEnabled' => array(
-                    'doc' => 'Should the Next Item be automatically played.',
+                    'doc' => 'Should the next item be played automatically.',
                     'type' => 'boolean'
                 ),
                 'autoContinueTime' => array(
