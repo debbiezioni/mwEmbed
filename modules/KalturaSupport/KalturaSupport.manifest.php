@@ -384,17 +384,17 @@ The playhead reflects segment time as if it was the natural stream length.",
         'description' => "The Kaltura custom logo plugin.",
         'attributes' => array(
             'watermarkPath' => array(
-                'doc' => "URL path to plugin image.",
+                'doc' => "The URL path to plugin image.",
                 'type' => 'url'
             ),
             'watermarkClickPath' => array(
-                'doc' => "URL for plugin click.",
+                'doc' => "The URL for plugin click.",
                 'type' => 'url'
             )
         )
     ),
     'theme' => array(
-        'description' => 'Theme CSS style.',
+        'description' => 'Use to to modify CSS styles.',
         'featureCheckbox' => true,
         'label' => 'Custom styles',
         'attributes' => array(
@@ -503,7 +503,7 @@ The playhead reflects segment time as if it was the natural stream length.",
     ),
     'watermark' => array(
         'featureCheckbox' => true, // *NEW* - actually enabled even if undefined but can be disabled via this property
-        'description' => "The kaltura watermark plugin", // used for tooltip
+        'description' => "Use to set the watermark image and location of the watermark using the Kaltura Watermark plugin.", // used for tooltip
         'type' => 'featuremenu', // *NEW* = renders as featuremenu also if undefined, but can be turned into submenu via this
         'label' => 'Watermark', // *NEW*
         'model' =>'config.plugins.watermark', //*NEW*
@@ -845,7 +845,7 @@ The playhead reflects segment time as if it was the natural stream length.",
 		)
 	),
 	'keyboardShortcuts' => array(
-		'description' => 'The keyboard shortcut\'s plugins allow you to control the player using keyboard shortcuts.',
+		'description' => 'Use to control the player using keyboard shortcuts.',
 		'attributes' => array(
 			'volumePercentChange' => array(
 				'doc' => 'Volume change percent, from 0 to 1.',
@@ -910,7 +910,7 @@ The playhead reflects segment time as if it was the natural stream length.",
 		)
 	),
 	'volumeControl' => array(
-		'description' => 'The volume control plugin allows you to control the player volume using mute/unmute buttons and a volume slider.',
+		'description' => 'Use to control the player volume using mute/unmute buttons and a volume slider.',
 		'attributes' => array(
 			'showSlider' => array(
 				'doc' => 'Show the volume slider.',
@@ -961,7 +961,7 @@ The playhead reflects segment time as if it was the natural stream length.",
 		)
 	),
 	'moderation' => array(
-		'description' => 'Allow your users to flag content as inapproriate.',
+		'description' => 'Use to moderate content and flag as inapproriate.',
 		'attributes' => array(
 			'header' => array(
 				'doc' => 'Header text to show above the form.',
